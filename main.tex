@@ -407,21 +407,21 @@
 \end{tcolorbox}
 
 
-% BASIC DIFFERENTIATION RULES
+% PROPERTIES OF DERIVATIVES
 
 
-\subsection{Basic Differentiation Rules}
+\subsection{Properties of Derivatives}
 
 \begin{tcolorbox}
-    Let $f$ and $g$ be differentiable functions. Then the following rules hold:
+    Let $f(x)$ and $g(x)$ be differentiable functions. Then the following rules hold:
     \[
     \begin{aligned}
-        &\text{(1)} \quad \frac{d}{dx}(c) = 0 \\[8pt]  
-        &\text{(2)} \quad \frac{d}{dx}(x^n) = nx^{n-1} \\[8pt]
-        &\text{(3)} \quad \frac{d}{dx}[cf(x)] = c[\frac{d}{dx}f(x)] \\[8pt]
-        &\text{(4)} \quad \frac{d}{dx}[f(x) \pm g(x)] = \frac{d}{dx}f(x) \pm \frac{d}{dx}g(x) \\[8pt]
-        &\text{(5)} \quad \frac{d}{dx}[f(x)g(x)] = f'(x)g(x) + f(x)g'(x) \\[8pt]
-        &\text{(6)} \quad \frac{d}{dx}[\frac{f(x)}{g(x)}] = \frac{f'(x)g(x) - f(x)g'(x)}{g(x)^2} \\[8pt]
+        &\text{(1)} \quad \frac{d}{dx}(c) = 0. \\[8pt]  
+        &\text{(2)} \quad \frac{d}{dx}(x^n) = nx^{n-1}. \\[8pt]
+        &\text{(3)} \quad \frac{d}{dx}[cf(x)] = c[\frac{d}{dx}f(x)]. \\[8pt]
+        &\text{(4)} \quad \frac{d}{dx}[f(x) \pm g(x)] = \frac{d}{dx}f(x) \pm \frac{d}{dx}g(x). \\[8pt]
+        &\text{(5)} \quad \frac{d}{dx}[f(x)g(x)] = f'(x)g(x) + f(x)g'(x). \\[8pt]
+        &\text{(6)} \quad \frac{d}{dx}[\frac{f(x)}{g(x)}] = \frac{f'(x)g(x) - f(x)g'(x)}{g(x)^2}. \\[8pt]
         &\text{(7)} \quad \frac{d}{dx}[f(g(x))] = f'(g(x))g'(x). \\[8pt]
     \end{aligned}
     \]
@@ -696,9 +696,9 @@
     \[
     a = x_0 < x_1 < x_2 < \dots < x_{n} = b
     \]
-    where the subintervals $[x_{i-1}, x_i]$ have length $\Delta x_i = x_i - x_{i-1}$. For each subinterval $[x_{i-1}, x_i]$, let $x_i^*$  be an \textbf{arbitrary sample point} within the interval, $x_i^* \in [x_{i-1}, x_i]$. Then, a \textbf{Riemann sum}, which \textbf{approximates} the area under the curve $f(x)$ over $[a,b]$, is defined as:
+    where the subintervals $[x_{i-1}, x_i]$ have length $\Delta x_i = x_i - x_{i-1}$. For each subinterval $[x_{i-1}, x_i]$, let $x_i^*$  be an \textbf{arbitrary sample point} within the interval. Then, a \textbf{Riemann sum}, which \textbf{approximates} the area under the curve $f(x)$ over $[a,b]$, is defined as:
     \[
-    S_n = \sum_{i=1}^n f(x_i^*) \Delta x_i.
+    S_n = \sum_{i=1}^n f(x_i^*) \Delta x_i, \quad x_i^* \in [x_{i-1}, x_i].
     \]
 \end{tcolorbox}
 
@@ -740,36 +740,103 @@
 \begin{tcolorbox}[breakable]
     The type of Riemann sum depends on how the sample points $x_i^*$ are chosen within each subinterval $[x_{i-1}, x_i]$.
     \begin{enumerate}
+        \item \textbf{Arbitrary-Point Rule:} $x_i^* \in [x_{i-1}, x_i] \rightarrow$ \textbf{General Riemann Sum}
+        \[
+        S_n = \sum_{i=1}^{n} f(x_i^*) \Delta x_i, \quad \Delta x_i = x_i - x_{i-1}.
+        \]
+        \textbf{Uniform Partition:} If all subintervals have equal width $\Delta x = \frac{b-a}{n}$, then \\ $x_i^* \in [x_{i-1}, x_i] = [a + (i - 1) \Delta x, a + i \Delta x]$ or $x_i^* = a + (i - 1 + c) \Delta x$, where $c \in [0,1]$ determines its position within the subinterval:
+        \[
+        S_n = \sum_{i=1}^{n} f(a + (i - 1 + c) \Delta x) \Delta x = \sum_{i=1}^{n} f(a + (i - 1 + c) \frac{(b - a)}{n}) \frac{b - a}{n}.
+        \]
+        $\bullet$ Uses arbitrary sample points $x_i^*$.
+    
         \item \textbf{Left Rule:} $x_i^* = x_{i-1}\rightarrow$ \textbf{Left Riemann Sum}
         \[
-        S_{\text{left}} = \sum_{i=1}^n f(x_{i-1})\Delta x_i
+        S_{\text{left}} = \sum_{i=1}^n f(x_{i-1}) \Delta x_i.
+        \]
+        \textbf{Uniform Partition:} $c = 0$
+        \[
+        S_{\text{left}} = \sum_{i=1}^n f(a + (i - 1) \Delta x) \Delta x.
         \]
         $\bullet$ Underestimates for increasing functions, overestimates for decreasing functions.
         
         \item \textbf{Right Rule:} $x_i^* = x_i\rightarrow$ \textbf{Right Riemann Sum}
         \[
-        S_{\text{right}} = \sum_{i=1}^n f(x_{i-1})\Delta x_i    
+        S_{\text{right}} = \sum_{i=1}^n f(x_i) \Delta x_i    
+        \]
+        \textbf{Uniform Partition:} $c = 1$
+        \[
+        S_{\text{right}} = \sum_{i=1}^n f(a + i \Delta x) \Delta x.
         \]
         $\bullet$ Overestimates for increasing functions, underestimates for decreasing functions.
         
         \item \textbf{Midpoint Rule:} $x_i^* = \frac{x_{i-1} + x_i}{2} \rightarrow$ \textbf{Midpoint Riemann Sum}
         \[
-        S_{\text{mid}} = \sum_{i=1}^n f\left( \frac{x_{i-1} + x_i}{2} \right) \Delta x_i
+        S_{\text{mid}} = \sum_{i=1}^n f\left( \frac{x_{i-1} + x_i}{2} \right) \Delta x_i.
+        \]
+        \textbf{Uniform Partition:} $c = \frac{1}{2}$
+        \[
+        S_{\text{mid}} = \sum_{i=1}^n f(a + (i - \frac{1}{2}) \Delta x) \Delta x.
         \]
         $\bullet$ Tends to give better approximations than left or right sums.
         
         \item \textbf{Upper Rule:} $x_i^* = \arg\sup\limits_{x \in [x_{i-1}, x_i]} f(x) \rightarrow$ \textbf{Upper Riemann Sum} (or \textbf{Upper Darboux Sum})
         \[
-        S_{\text{upper}} = \sum_{i=1}^n \sup\limits_{x \in [x_{i-1}, x_i]} f(x)\Delta x_i
+        S_{\text{upper}} = \sum_{i=1}^n \sup\limits_{x \in [x_{i-1}, x_i]} f(x) \Delta x_i.
         \]
         $\bullet$ Always \textbf{overestimates} the integral.
+
+        \pagebreak
         
         \item \textbf{Lower Rule:} $x_i^* = \arg\inf\limits_{x \in [x_{i-1}, x_i]} f(x) \rightarrow$ \textbf{Lower Riemann Sum} (or \textbf{Lower Darboux Sum})
         \[
-        S_{\text{lower}} = \sum_{i=1}^n \inf\limits_{x \in [x_{i-1}, x_i]} f(x)\Delta x_i
+        S_{\text{lower}} = \sum_{i=1}^n \inf\limits_{x \in [x_{i-1}, x_i]} f(x) \Delta x_i.
         \]
         $\bullet$ Always \textbf{underestimates} the integral.
     \end{enumerate}
+\end{tcolorbox}
+
+
+% DEFINITE INTEGRAL
+
+
+\subsection{Definite Integral}
+
+\begin{tcolorbox}
+    The \textbf{definite integral} of a function $f(x)$ over the interval $[a,b]$ is defined as the limit of a Riemann sum:
+    \[
+    \int_{a}^{b} f(x) \, dx = \lim_{n \to \infty} \sum_{i=1}^n f(x_i^*) \Delta x_i
+    \]
+    where:
+    \begin{itemize}
+        \item $[a,b]$ is divided into $n$ subintervals.
+        \item $\Delta x_i = x_i - x_{i-1}$ is the width of the $i$-th subinterval.
+        \item $x_i^*$ is any sample point in the $i$-th subinterval.
+    \end{itemize}
+\end{tcolorbox}
+\pagebreak
+
+
+% PROPERTIES OF DEFINITE INTEGRALS
+
+
+\subsection{Properties of Definite Integrals}
+
+\begin{tcolorbox}[breakable]
+    Let $f(x)$ and $g(x)$ be integrable functions on $[a,b]$ and $c$ be a constant. Then:
+    \[
+    \begin{aligned}
+        &\text{(1)} \quad \int_{a}^{b}c \, dx = c(b-a). \\[8pt]
+        &\text{(2)} \quad \int_{a}^{a}f(x) \, dx = 0. \\[8pt]
+        &\text{(3)} \quad \int_{b}^{a}f(x) \, dx = -\int_{a}^{b}f(x) \, dx. \\[8pt]
+        &\text{(4)} \quad \int_{a}^{b}cf(x) \, dx = c \int_{a}^{b}f(x) \, dx. \\[8pt]
+        &\text{(5)} \quad \int_{a}^{b}\left[f(x) \pm g(x)\right] \, dx = \int_{a}^{b}f(x) \, dx \pm \int_{a}^{b}g(x) \, dx. \\[8pt]
+        &\text{(6)} \quad \int_{a}^{b}f(x) \, dx = \int_{a}^{c}f(x) \, dx + \int_{c}^{b}f(x) \, dx. \\[8pt]
+        &\text{(7)} \quad \int_{a}^{b}f(x) \, dx \leq \int_{a}^{b}g(x) \, dx \quad \text{ if } f(x) \leq g(x) \text{ on } [a,b]. \\[8pt]
+        &\text{(8)} \quad \left| \int_{a}^{b}f(x) \, dx \right| \leq \int_{a}^{b} \left|f(x)\right| \, dx. \\[8pt]
+        &\text{(9)} \quad m(b-a) \leq \int_{a}^{b}f(x) \, dx \leq M(b-a) \quad \text{ if } m \leq f(x) \leq M \text{ on } [a,b]. \\[8pt]
+    \end{aligned}
+    \]
 \end{tcolorbox}
 
 
