@@ -840,5 +840,60 @@
 \end{tcolorbox}
 
 
+% NET AND TOTAL AREA
+
+
+\subsection{Net and Total Area}
+
+\begin{tcolorbox}
+    Let $f(x)$ be integrable on $[a,b]$. Define:
+    \begin{itemize}
+        \item $A_1$ = area of region where $f(x) > 0$ (area above $x$-axis).
+        \item $A_2$ = area of region where $f(x) < 0$ (area below $x$-axis).
+    \end{itemize}
+    Then:
+    \begin{itemize}
+        \item \textbf{Net Area:}
+        \[
+        \int_{a}^{b} f(x) \, dx = A_1 - A_2.
+        \]
+        \item \textbf{Total Area:}
+        \[
+        \int_{a}^{b} \left| f(x) \right| \, dx = A_1 + A_2.
+        \]
+    \end{itemize}
+\end{tcolorbox}
+
+
+% FUNDAMENTAL THEOREM OF CALCULUS. PART 1
+
+
+\subsection{Fundamental Theorem of Calculus. Part 1}
+
+\begin{tcolorbox}
+    Let $f$ be a continuous on $[a, b]$. Define the function
+    \[
+    F(x) = \int_{a}^{x} f(t) \, dt.
+    \]
+    Then:
+    \[
+    F'(x) = \frac{d}{dx} \left[ \int_{a}^{x} f(t) \, dt \right] = f(x), \quad \forall x \in (a,b).
+    \]
+\end{tcolorbox}
+
+
+% FUNDAMENTAL THEOREM OF CALCULUS. PART 2
+
+
+\subsection{Fundamental Theorem of Calculus. Part 2}
+
+\begin{tcolorbox}
+    If $f$ is continuous on $[a,b]$ and $F'(x) = f(x)$, then
+    \[
+    \int_{a}^{b} f(x) \, dx = F(b) - F(a) =  F(x) \bigg]_{a}^{b} = F(x) \bigg|_{a}^{b}.
+    \]
+\end{tcolorbox}
+
+
 
 \end{document}
