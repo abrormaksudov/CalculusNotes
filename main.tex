@@ -60,10 +60,10 @@
 \subsection{Precise Definition of a Limit}
 
 \begin{tcolorbox}
-\textbf{Standard Limit:}  
-\[
-\lim_{x \to a} f(x) = L \quad \text{if} \quad \forall \varepsilon > 0, \, \exists \delta > 0 \text{ such that } 0 < |x - a| < \delta \Rightarrow |f(x) - L| < \varepsilon.
-\]
+    \textbf{Standard Limit:}  
+    \[
+    \lim_{x \to a} f(x) = L \quad \text{if} \quad \forall \varepsilon > 0, \, \exists \delta > 0 \text{ such that } 0 < |x - a| < \delta \Rightarrow |f(x) - L| < \varepsilon.
+    \]
 \end{tcolorbox}
 
 
@@ -865,6 +865,20 @@
 \end{tcolorbox}
 
 
+% MEAN VALUE THEOREM FOR INTEGRALS
+
+
+\subsection{Mean Value Theorem for Integrals}
+
+\begin{tcolorbox}
+    Let $f$ be continuous on [a,b]. Then:
+    \[
+    \exists c \in (a,b) \text{ such that } \frac{1}{b - a} \int_{a}^{b} f(x) \, dx = f(c)
+    \]
+    The expression on the left is the \textbf{average value} of the function $f(x)$ on the interval $[a, b]$.
+\end{tcolorbox}
+
+
 % FUNDAMENTAL THEOREM OF CALCULUS. PART 1
 
 
@@ -893,7 +907,6 @@
     \int_{a}^{b} f(x) \, dx = F(b) - F(a) =  F(x) \bigg]_{a}^{b} = F(x) \bigg|_{a}^{b}.
     \]
 \end{tcolorbox}
-
 
 
 \end{document}
