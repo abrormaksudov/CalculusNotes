@@ -18,6 +18,7 @@
 \usepackage{centernot}
 \usepackage{xcolor}
 \usepackage{soul}
+\usepackage{ltablex}
 % ----- Custom Commands -----
 \newcommand{\R}{\mathbb{R}} % Real numbers
 \newcommand{\N}{\mathbb{N}} % Natural numbers
@@ -907,6 +908,48 @@
     \int_{a}^{b} f(x) \, dx = F(b) - F(a) =  F(x) \bigg]_{a}^{b} = F(x) \bigg|_{a}^{b}.
     \]
 \end{tcolorbox}
+
+
+% TABLE OF INDEFINITE INTEGRALS
+
+
+\subsection{Table of Indefinite Integrals}
+
+\begin{tcolorbox}[breakable]
+    \keepXColumns
+    \begin{tabularx}{\textwidth}{X|X}
+        $\int a \, dx = ax + C$ &  
+        $\int \log_a x \, dx = \frac{x}{\ln{a}} (\ln{x} - 1) + C$ \\[12pt] 
+
+        $\int x^n \, dx = \frac{x^{n+1}}{n+1} + C,\quad n \neq -1$ &
+        $\int (ax+b)^n \, dx = \frac{(ax+b)^{n+1}}{a(n+1)} + C$ \\[12pt]
+        
+        $\int x^{-1} \, dx = \int \frac{1}{x} \, dx = \ln{|x|} + C$ &
+        $\int \frac{c}{ax+b} \, dx = \frac{c}{a} \ln{|ax+b|} + C$ \\[12pt] 
+        
+        $\int e^{ax} \, dx = \frac{1}{a} e^{ax} + C$ &
+        $\int a^x \, dx = \frac{a^x}{\ln{a}} + C,\quad a > 0,\; a \neq 1$ \\[12pt]
+              
+        $\int \sin{x} \, dx = - \cos{x} + C$ &
+        $\int \tan{x} \, dx = \ln{|\sec{x}|} = - \ln{|\cos{x}|} + C$ \\[12pt]
+              
+        $\int \cos{x} \, dx = \sin{x} + C$ &
+        $\int \cot{x} \, dx = -\ln{|\csc{x}|} = \ln{|\sin{x}|} + C$ \\[12pt]
+        
+        $\int \sec{x} \, dx = \ln{|\sec{x} + \tan{x}|} + C$ &
+        $\int \sec^2{x} \, dx = \tan{x} + C$ \\[12pt]
+        
+        $\int \csc{x} \, dx = \ln{|\csc{x} - \cot{x}|} + C$ &
+        $\int \csc^2{x} \, dx = -\cot{x} + C$ \\[12pt]
+        
+        $\int \sec{x} \tan{x} \, dx = \sec{x} + C$ &
+        $\int \frac{1}{\sqrt{1-x^2}} \, dx = \arcsin{x} + C$ \\[12pt]
+        
+        $\int \csc{x} \cot{x} \, dx = -\csc{x} + C$ &
+        $\int \frac{1}{1+x^2} \, dx = \arctan{x} + C$ \\[12pt]
+    \end{tabularx}
+\end{tcolorbox}
+
 
 
 \end{document}
