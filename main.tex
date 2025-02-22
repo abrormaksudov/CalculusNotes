@@ -276,13 +276,13 @@
 
 \subsection{Asymptotes}
 
-\begin{tcolorbox}
+\begin{tcolorbox}[breakable]
     \textbf{Vertical Asymptote:} 
     \( x = a \) is a vertical asymptote if  
     \[
     \lim\limits_{x \to a^{\pm}} f(x) = \pm\infty.
     \]
-
+    
     \textbf{Horizontal Asymptote:}
     \( y = L \) is a horizontal asymptote if  
     \[
@@ -302,13 +302,14 @@
     \[
     \lim\limits_{x \to \pm\infty} \big( f(x) - (mx + b) \big) = 0.
     \]
-    
     For a rational function \( \displaystyle f(x) = \frac{P(x)}{Q(x)} \), if \( \deg P = \deg Q + 1 \), then \( f(x) \) has an oblique asymptote.  
     Find it by polynomial long division:  
     \[
     f(x) = D(x) + \frac{R(x)}{Q(x)}, \quad \text{as } x \to \pm\infty, \quad f(x) \approx D(x).
     \]
-
+    
+    \newpage
+    
     \textbf{Curvilinear Asymptote:}
     \( y = g(x) \) is a curvilinear asymptote if
     \[
@@ -474,8 +475,8 @@
     \begin{itemize}
         \item \textbf{Absolute Maximum:} $f(c)$ is an absolute maximum if $f(c) \geq f(x),\ \forall x \in D.$
         \item \textbf{Absolute Minimum:} $f(c)$ is an absolute minimum if $f(c) \leq f(x),\ \forall x \in D.$
-        \item \textbf{Local Maximum:} $f(c)$ is a local maximum if $\exists \delta > 0$ such that $f(c) \geq f(x),\\ \ \forall x \in (c - \delta, c + \delta).$
-        \item \textbf{Local Minimum:} $f(c)$ is a local minimum if $\exists \delta > 0$ such that $f(c) \leq f(x),\\ \ \forall x \in (c - \delta, c + \delta).$
+        \item \textbf{Local Maximum:} $f(c)$ is a local maximum if $\exists \delta > 0$ such that $f(c) \geq f(x),\\ \quad \forall x \in (c - \delta, c + \delta).$
+        \item \textbf{Local Minimum:} $f(c)$ is a local minimum if $\exists \delta > 0$ such that $f(c) \leq f(x),\\ \quad \forall x \in (c - \delta, c + \delta).$
     \end{itemize}
 \end{tcolorbox}
 
@@ -487,7 +488,9 @@
 
 \begin{tcolorbox}
     If $f$ is continuous on a closed interval $[a,b]$, then $f$ attains an absolute maximum and an absolute minimum on $[a,b]$:
-    \[ \exists c,d \in [a,b] \text{ such that } f(c) \leq f(x) \leq f(d),\ \forall x \in [a,b]. \]
+    \[
+    \exists c,d \in [a,b] \text{ such that } f(c) \leq f(x) \leq f(d),\quad \forall x \in [a,b].
+    \]
 \end{tcolorbox}
 
 
@@ -595,8 +598,8 @@
 \begin{tcolorbox}
     Let $f(x)$ be twice differentiable on interval $I$. Then:
     \begin{itemize}
-        \item If $f''(x) > 0\ \forall x \in I \implies f(x)$ is \textbf{concave up} on $I$.
-        \item If $f''(x) < 0\ \forall x \in I \implies f(x)$ is \textbf{concave down} on $I$.
+        \item If $f''(x) > 0, \quad \forall x \in I \implies f(x)$ is \textbf{concave up} on $I$.
+        \item If $f''(x) < 0, \quad \forall x \in I \implies f(x)$ is \textbf{concave down} on $I$.
     \end{itemize}
 \end{tcolorbox}
 
@@ -672,7 +675,7 @@
 
 \begin{tcolorbox}
     A function $F(x)$ is an \textbf{antiderivative} (or primitive function) of $f(x)$ on an interval $I$ if:
-    \[ F'(x) = f(x),\ \forall x \in I. \]
+    \[ F'(x) = f(x), \quad \forall x \in I. \]
 \end{tcolorbox}
 
 
@@ -950,6 +953,67 @@
     \end{tabularx}
 \end{tcolorbox}
 
+
+% --------------------------------------------------
+
+
+\section{Sequences and Series}
+
+
+% DEFINITION OF A SEQUENCE
+
+
+\subsection{Definition of a Sequence}
+
+\begin{tcolorbox}
+    A sequence is a function $a: \mathbb{N} \rightarrow \mathbb{R}$ that assigns to each $n \in N$ a real number $a_n$.
+    \[
+    \{a_n\} = \{a_n\}_{n=1}^{\infty} = (a_n) = \{a_1, a_2, a_3, \dots, a_n, \dots\}
+    \]
+\end{tcolorbox}
+
+
+% MONOTONIC SEQUENCE
+
+
+\subsection{Monotonic Sequence}
+
+\begin{tcolorbox}
+    A sequence $\{a_n\}$ is \textbf{monotonic} if it is either monotonically increasing or monotonically decreasing.
+    \begin{itemize}
+        \item \textbf{Increasing:}
+        \[ a_n \leq a_{n+1}, \quad \forall n \in \mathbb{N} \text{ (weakly increasing)}. \]
+        \[ a_n < a_{n+1}, \quad \forall n \in \mathbb{N} \text{ (strictly increasing)}. \]
+        \item \textbf{Decreasing:}
+        \[ a_n \geq a_{n+1}, \quad \forall n \in \mathbb{N} \text{ (weakly decreasing)}. \]
+        \[ a_n > a_{n+1}, \quad \forall n \in \mathbb{N} \text{ (strictly decreasing)}. \]
+    \end{itemize}
+\end{tcolorbox}
+
+
+% BOUNDED SEQUENCE
+
+
+\subsection{Bounded Sequence}
+
+\begin{tcolorbox}
+    A sequence $\{a_n\}$ is \textbf{bounded} if and only if:
+    \[
+    \exists M > 0 \text{ such that } |a_n| \leq M, \quad \forall n \in \mathbb{N}.
+    \]
+    or
+    \[ 
+    \exists M_1, M_2 \in \mathbb{R} \text{ such that } M_1 \leq a_n \leq M_2, \quad \forall n \in \mathbb{N}.
+    \]
+    Equivalently, $\{a_n\}$ is \textbf{bounded} if it is both \textbf{bounded above} and \textbf{bounded below}:
+    \begin{itemize}
+        \item \textbf{Bounded above:} $\exists M_2 \in \mathbb{R}$ such that $a_n \leq M_2, \quad \forall n \in \mathbb{N}$.
+        \item \textbf{Bounded below:} $\exists M_1 \in \mathbb{R}$ such that $a_n \geq M_1, \quad \forall n \in \mathbb{N}$.
+    \end{itemize}
+    \[
+    \text{A sequence is bounded} \iff \text{It is both bounded above and bounded below}
+    \]
+\end{tcolorbox}
 
 
 \end{document}
