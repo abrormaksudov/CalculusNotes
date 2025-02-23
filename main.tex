@@ -1024,7 +1024,7 @@
 \begin{tcolorbox}
     A sequence $\{a_n\}$ has a limit $L \in \mathbb{R}$ if:
     \[
-    \lim_{n \to \infty} a_n = L \quad \text{if} \quad \forall \varepsilon>0, \, \exists N \in \mathbb{N} \text{ such that } |a_n - L| < \varepsilon, \forall n \geq N.
+    \lim_{n \to \infty} a_n = L \quad \text{if} \quad \forall \varepsilon>0, \, \, \exists N \in \mathbb{N} \text{ such that } |a_n - L| < \varepsilon, \, \forall n \geq N.
     \]
     If such an $L$ exists, the sequence is \textbf{convergent}; otherwise, it is \textbf{divergent}.
 \end{tcolorbox}
@@ -1100,7 +1100,7 @@
     \]
     The \textbf{$\boldsymbol{n}^\text{th}$ partial sum} of series:
     \[
-    S_n = \sum_{i=1}^{n} a_i.
+    S_n = \sum_{k=1}^{n} a_k.
     \]
 \end{tcolorbox}
 
@@ -1111,9 +1111,9 @@
 \subsection{Convergence and Divergence of Series}
 
 \begin{tcolorbox}
-    A infinite series $\sum a_n$ \textbf{converges} if the sequence of partial sums $\{ S_n \}$ has a finite limit:
+    A infinite series $\textstyle \sum a_n$ \textbf{converges} if the sequence of partial sums $\{ S_n \}$ has a finite limit:
     \[
-    \sum_{i=1}^{\infty} a_i = \lim_{n \to \infty} \sum_{i=1}^{n} a_i \quad \text{or} \quad \lim_{n \to \infty} S_n = S.
+    \sum_{k=1}^{\infty} a_k = \lim_{n \to \infty} \sum_{k=1}^{n} a_k \quad \text{or} \quad \lim_{n \to \infty} S_n = S.
     \]
     Otherwise, the series \textbf{diverges}.
 \end{tcolorbox}
@@ -1145,6 +1145,48 @@
         \end{itemize}
     \end{multicols}
 \end{tcolorbox}
+
+
+% PROPERTIES OF SERIES
+
+
+\subsection{Properties of Series}
+
+\begin{tcolorbox}
+    Let $\textstyle \sum a_n$ and $\textstyle \sum b_n$ be series, and let $c, d$ be a constant. Then:
+    \[
+    \begin{aligned}
+        &\text{(1)} \quad \sum_{k=a}^b c = c(b - a + 1). \\[8pt]  
+        &\text{(2)} \quad \sum_{n=k}^{\infty} \pm c = \pm \infty, \quad c > 0. \\[8pt]
+        &\text{(3)} \quad \sum_{n=k}^{m} (ca_n \pm db_n) = c \sum_{n=k}^{m} a_n \pm d \sum_{n=k}^{m} b_n. \\[8pt]
+        &\text{(4)} \quad \sum_{n=k}^{m} a_n = \sum_{n=k}^{p} a_n + \sum_{n=p+1}^{m} a_n. \\[8pt]
+        &\text{(5)} \quad \sum_{n=k}^{m} a_n = \sum_{n=0}^{m-k} a_{m-n}. \\[8pt]
+        &\text{(6)} \quad \sum_{n=k}^{m} a_n = \sum_{j=k-h}^{m-h} a_{j+h}. \\[8pt]
+        &\text{(7)} \quad \sum_{k=1}^n k = \sum_{k=0}^{n-1} (k + 1). \\[8pt]
+    \end{aligned}
+    \]
+\end{tcolorbox}
+
+
+% GEOMETRIC SERIES
+
+
+\subsection{Geometric Series}
+
+\begin{tcolorbox}
+    \[
+    \text{Geometric} \implies \sum_{n=0}^{\infty} ar^n = a + ar + ar^2 + ar^3 + \dots
+    \]
+    \begin{itemize}
+        \item \textbf{Partial Sum:}
+        \[ S_n = \sum_{k=0}^{n-1} ar^k = a \frac{1-r^n}{1-r}, \quad r\neq1. \]
+        \item \textbf{Convergence:}
+        \[ |r| < 1 \implies \sum_{n=0}^{\infty} ar^n = \frac{a}{1-r}. \]
+        \item \textbf{Divergence:}
+        \[ |r| \geq 1 \implies \text{Series diverges.} \]
+    \end{itemize}
+\end{tcolorbox}
+
 
 
 \end{document}
