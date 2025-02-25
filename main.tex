@@ -43,7 +43,7 @@
 % ----- Title -----
 \title{Calculus Notes}
 \author{Abror Maksudov}
-\date{\today}
+\date{Last updated: \today}
 
 \everymath{\displaystyle}
 
@@ -1254,11 +1254,27 @@
 % DIVERGENCE TEST
 
 
-\subsection{Divergence Test}
+\subsection{Divergence Test (\emph{n}th-Term Test)}
 
 \begin{tcolorbox}
     \[
     \lim_{n \to \infty} a_n \neq 0 \quad \lor \quad \lim_{n \to \infty} a_n \text{ does not exist} \implies \sum a_n \text{ diverges}.
+    \]
+\end{tcolorbox}
+
+
+% DIRECT COMPARISON TEST
+
+
+\subsection{Direct Comparison Test}
+
+\begin{tcolorbox}
+    If $0 \leq a_n \leq b_n$ for all $n \geq N$:
+    \[
+    \begin{aligned}
+        &\bullet \quad \sum b_n \text{ converges} \implies \sum a_n \text{ converges}. \\[8pt]  
+        &\bullet \quad \sum a_n \text{ diverges} \implies \sum b_n \text{ diverges}.
+    \end{aligned}
     \]
 \end{tcolorbox}
 
