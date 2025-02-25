@@ -1258,7 +1258,7 @@
 
 \begin{tcolorbox}
     \[
-    \lim_{n \to \infty} a_n \neq 0 \quad \lor \quad \lim_{n \to \infty} a_n \text{ does not exist} \implies \sum a_n \text{ diverges}.
+    \lim_{n \to \infty} a_n \neq 0 \; \lor \; \lim_{n \to \infty} a_n \text{ does not exist} \implies \sum a_n \text{ diverges}.
     \]
 \end{tcolorbox}
 
@@ -1279,5 +1279,24 @@
 \end{tcolorbox}
 
 
+% LIMIT COMPARISON TEST
+
+
+\subsection{Limit Comparison Test}
+
+\begin{tcolorbox}
+    Let $\textstyle \sum a_n$ and $\textstyle \sum b_n$ be series with $a_n > 0,\, b_n > 0$ for all $n \geq N$. Define the limit:
+    \[
+    L = \lim_{n \to \infty} \frac{a_n}{b_n}.
+    \]
+    \[
+    \begin{aligned}
+        &\bullet \quad 0 < L < \infty \implies \sum a_n \text{ and } \sum b_n \text{ both converge or both diverge}. \\[8pt]  
+        &\bullet \quad L = 0 \; \land \; \sum b_n \text{ converges} \implies \sum a_n \text{ converges}. \\[8pt]
+        &\bullet \quad L = \infty \; \land \; \sum b_n \text{ diverges} \implies \sum a_n \text{ diverges}.
+    \end{aligned}
+    \]
+    Note: The order of division does not matter.
+\end{tcolorbox}
 
 \end{document}
