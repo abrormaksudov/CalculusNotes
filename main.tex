@@ -1231,8 +1231,8 @@
         \begin{multicols}{2}
             \begin{itemize}[label=$\circ$]
                 \item Divergence Test % (nth-Term Test)
-                \item Ratio Test % (d'Alembert's Ratio Test)
-                \item Root Test % (Cauchy's Root Test)
+                \item Ratio Test % (d'Alembert's Criterion)
+                \item Root Test % (Cauchy's Criterion)
                 \item Absolute Convergence Test
             \end{itemize}
         \end{multicols}
@@ -1370,6 +1370,26 @@
     For an alternating series approximated by its \emph{n}th partial sum, the absolute error (or remainder) is less than or equal to the absolute value of the next term in the series.
     \[
     |R_n| = |S - S_n| \; \leq \; a_{n+1} = |S_n - S_{n+1}|.
+    \]
+\end{tcolorbox}
+
+
+% RATIO TEST
+
+
+\subsection{Ratio Test (d'Alembert's Criterion)}
+
+\begin{tcolorbox}
+    Let $\textstyle \sum a_n$ be an infinite series with $a_n \neq 0$. Define the limit:
+    \[
+    L = \lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right|.
+    \]
+    \[
+    \begin{aligned}
+        &\bullet \quad L < 1 \implies \sum a_n \text{ converges absolutely}. \\[8pt]  
+        &\bullet \quad L > 1 \; \lor \; L = \infty \implies \sum a_n \text{ diverges}. \\[8pt]
+        &\bullet \quad L = 1 \implies \text{Test is inconclusive}.
+    \end{aligned}
     \]
 \end{tcolorbox}
 
