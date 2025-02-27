@@ -1430,6 +1430,22 @@
         \left(\sum a_n \text{ converges} \right) \land \left(\sum \left| a_n \right| \text{ diverges} \right) \implies \sum a_n \text{ converges conditionally}.
         \]        
     \end{itemize}
+    Note: All rearrangements of absolutely convergent series converge to the same sum.
+\end{tcolorbox}
+
+
+% RIEMANN SERIES THEOREM
+
+
+\subsection{Riemann Series Theorem}
+
+\begin{tcolorbox}
+    Conditionally convergent series $\textstyle \sum_{n=1}^{\infty} a_n$ can be rearranged to:
+    \begin{itemize}
+        \item Converge to any real number: $\textstyle \forall M \in \mathbb{R}, \, \exists \sigma$ such that $\sum_{n=1}^{\infty} a_{\sigma (n)} = M$.
+        \item Diverge to $+\infty$ or $-\infty$: $\textstyle \exists \sigma$ such that $\sum_{n=1}^{\infty} a_{\sigma (n)} = \pm \infty$.
+        \item Fail to approach any limit: $\exists \sigma$ such that $\lim_{N \to \infty} \sum_{n=1}^N a_{\sigma (n)}$ does not exist.
+    \end{itemize}
 \end{tcolorbox}
 
 \end{document}
