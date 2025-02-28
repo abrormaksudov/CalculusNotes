@@ -43,7 +43,7 @@
 % ----- Title -----
 \title{Calculus Notes}
 \author{Abror Maksudov}
-\date{Last updated: \today}
+\date{Last Updated: \today}
 
 \everymath{\displaystyle}
 
@@ -1186,6 +1186,26 @@
         \[ |r| < 1 \implies \sum_{n=0}^{\infty} ar^n = \frac{a}{1-r}. \]
         \item \textbf{Divergence:}
         \[ |r| \geq 1 \implies \text{Series diverges.} \]
+    \end{itemize}
+\end{tcolorbox}
+
+
+% TELESCOPING SERIES
+
+
+\subsection{Telescoping Series}
+
+\begin{tcolorbox}
+    \[
+    \text{Telescoping} \implies \sum_{n=1}^{\infty} (a_n - a_{n+1}) = (a_1 - a_2) + (a_2 - a_3) + (a_3 - a_4) + \dots
+    \]
+    \begin{itemize}
+        \item \textbf{Partial Sum:}
+        \[ S_n = \sum_{k=1}^{n} (a_k - a_{k+1}) = a_1 - a_{n+1}. \]
+        \item \textbf{Convergence:}
+        \[ \lim_{n \to \infty} a_{n+1} = L \implies \sum_{n=1}^{\infty} (a_n - a_{n+1}) = a_1-L. \]
+        \item \textbf{Divergence:}
+        \[ \lim_{n \to \infty} a_{n+1} \text{ does not exist} \implies \text{Series diverges.} \]
     \end{itemize}
 \end{tcolorbox}
 
