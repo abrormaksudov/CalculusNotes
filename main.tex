@@ -1408,7 +1408,7 @@
 \begin{tcolorbox}
     For an alternating series approximated by its \emph{n}th partial sum, the absolute error (or remainder) is less than or equal to the absolute value of the next term in the series.
     \[
-    |R_n| = |S - S_n| \; \leq \; a_{n+1} = |S_n - S_{n+1}|.
+    |R_n| = |S - S_n| \; \leq \; a_{n+1} = |S_{n+1} - S_n|.
     \]
 \end{tcolorbox}
 
@@ -1481,10 +1481,25 @@
 \begin{tcolorbox}
     Conditionally convergent series $\textstyle \sum_{n=1}^{\infty} a_n$ can be rearranged to:
     \begin{itemize}
-        \item Converge to any real number: $\textstyle \forall M \in \mathbb{R}, \, \exists \sigma$ such that $\sum_{n=1}^{\infty} a_{\sigma (n)} = M$.
-        \item Diverge to $+\infty$ or $-\infty$: $\textstyle \exists \sigma$ such that $\sum_{n=1}^{\infty} a_{\sigma (n)} = \pm \infty$.
-        \item Fail to approach any limit: $\exists \sigma$ such that $\lim_{N \to \infty} \sum_{n=1}^N a_{\sigma (n)}$ does not exist.
+        \item Converge to any real number: $\; \textstyle \forall M \in \mathbb{R}, \, \exists \sigma$ such that $\sum_{n=1}^{\infty} a_{\sigma (n)} = M$.
+        \item Diverge to $\pm \infty$: $\;  \textstyle \exists \sigma$ such that $\sum_{n=1}^{\infty} a_{\sigma (n)} = \pm \infty$.
+        \item Fail to approach any limit: $\;  \exists \sigma$ such that $\lim_{N \to \infty} \sum_{n=1}^N a_{\sigma (n)}$ does not exist.
     \end{itemize}
 \end{tcolorbox}
+
+
+% POWER SERIES
+
+
+\subsection{Power Series}
+
+\begin{tcolorbox}
+    A power series centered at $c$ is an infinite series of the form
+    \[
+    \sum_{n=0}^{\infty} a_n (x-c)^n = a_0 + a_1 (x - c) + a_2 (x - c)^2 + \dots
+    \]
+    where $\{a_n\}$ is a sequence of coefficients, $x$ is a variable, and $c$ is the center of the series.
+\end{tcolorbox}
+    
 
 \end{document}
