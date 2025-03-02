@@ -1614,6 +1614,21 @@
         &= f(a) + f'(a) (x-a) + \frac{f''(a)}{2!} (x-a)^2 + \dots + \frac{f^{(n)}(a)}{n!} (x-a)^n.
     \end{align*}
 \end{tcolorbox}
+
+
+% TAYLOR'S THEOREM
+
+
+\subsection{Taylor's Theorem}
+
+\begin{tcolorbox}
+    Let $f$ be a function that is $n+1$ times differentiable on an open interval $I$ containing a point $a$. Then for any $x \in I$, there exists a point $\xi$ between $a$ and $x$ such that:
+    \begin{align*}
+        f(x) &= P_n(x) + R_n(x) \\
+        &= \sum_{k=0}^n \frac{f^{(k)}(a)}{k!} (x-a)^k + \frac{f^{(n+1)}(\xi)}{(n+1)!} (x - a)^{n+1}.
+    \end{align*}
+    Note: $\textstyle R_n(x) =  \frac{f^{(n+1)}(\xi)}{(n+1)!} (x - a)^{n+1}$ is the Lagrange form of the remainder.
+\end{tcolorbox}
     
 
 \end{document}
