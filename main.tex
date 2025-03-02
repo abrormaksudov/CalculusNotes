@@ -1561,6 +1561,30 @@
         \end{multicols}
     \end{itemize}
 \end{tcolorbox}
+
+
+% DIFFERENTIATION AND INTEGRATION OF POWER SERIES
+
+
+\subsection{Differentiation and Integration of Power Series}
+
+\begin{tcolorbox}
+    For a power series centered at $c$
+    \[ f(x) = \sum_{n=0}^{\infty} a_n (x - c)^n = a_0 + a_1 (x - c) + a_2 (x - c)^2 + a_3 (x - c)^3 + \dots \] 
+    with radius of convergence $R$: \\[10pt]
+    $\bullet$ \textbf{Differentiation:}
+    \[
+    f'(x) = \frac{d}{dx} \left[ \sum_{n=0}^{\infty} a_n (x - c)^n  \right] = 0 + a_1 + 2 a_2 (x - c) + 3 a_3 (x - c)^2 + \dots
+    \]
+    \[ \boxed{f'(x) = \sum_{n=1}^{\infty} na_n(x-c)^{n-1}} \]
+    
+    $\bullet$ \textbf{Integration:}
+    \[
+    \int f(x) \, dx = \int \sum_{n=0}^{\infty} a_n (x - c)^n \, dx = C + a_0 (x - c) + \frac{a_1}{2} (x - c)^2 + \frac{a_2}{3} (x - c)^3 + \dots 
+    \]
+    \[ \boxed{\int f(x) \, dx = C + \sum_{n=0}^{\infty} \frac{a_n}{n+1} (x-c)^{n+1}} \]
+    Note: Both operations preserve the radius of convergence $R$, however, convergence at the endpoints $x = c \pm R$ may change and must be checked separately.
+\end{tcolorbox}
     
 
 \end{document}
