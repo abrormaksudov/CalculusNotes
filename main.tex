@@ -1,46 +1,18 @@
 \documentclass[a4paper,11pt]{article}
+
 \usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
-% ----- Packages -----
-\usepackage{amsmath, amssymb, amsthm} % Advanced math
-\usepackage{mathtools} % Extra math tools
-\usepackage{physics} % Derivatives, integrals, and more
-\usepackage{enumitem} % Better lists
-\usepackage{graphicx} % For images if needed
+\usepackage{hyperref}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage{graphicx}
 \usepackage[labelformat=empty]{caption}
-\usepackage{xcolor} % Colors for emphasis
-\usepackage{hyperref} % Clickable links
-\usepackage{tcolorbox} % Colored boxes for highlighting key points
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable}
 \usepackage{multicol}
 \usepackage{tabularx}
-\usepackage{parcolumns}
-\tcbuselibrary{listings,theorems}
-\tcbuselibrary{breakable}
-\usepackage{centernot}
-\usepackage{xcolor}
-\usepackage{soul}
 \usepackage{ltablex}
-% ----- Custom Commands -----
-\newcommand{\R}{\mathbb{R}} % Real numbers
-\newcommand{\N}{\mathbb{N}} % Natural numbers
-\newcommand{\Z}{\mathbb{Z}} % Integers
-\newcommand{\Q}{\mathbb{Q}} % Rational numbers
-\newcommand{\C}{\mathbb{C}} % Complex numbers
+\usepackage{centernot}
 
-% ----- Theorem Styles -----
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}
-
-\theoremstyle{plain}
-\newtheorem{theorem}{Theorem}
-\newtheorem{proposition}{Proposition}
-\newtheorem{lemma}{Lemma}
-\newtheorem{corollary}{Corollary}
-
-\theoremstyle{remark}
-\newtheorem{example}{Example}
-\newtheorem{remark}{Remark}
-
-% ----- Title -----
 \title{Calculus Notes}
 \author{Abror Maksudov}
 \date{Last Updated: \today}
@@ -1658,6 +1630,75 @@
     where
     \[
     \binom{\alpha}{n} = \frac{\alpha(\alpha-1)\dots(\alpha-n+1)}{n!}.
+    \]
+\end{tcolorbox}
+
+
+% --------------------------------------------------
+
+
+\section{Multivariable Calculus}
+
+
+% LIMIT OF A FUNCTION OF TWO VARIABLES
+
+
+\subsection{Limit of a Function of Two Variables}
+
+\begin{tcolorbox}
+    \[
+    \lim_{(x,y) \to (a,b)} f(x, y) = L \quad \text{if} \quad \forall \varepsilon > 0, \, \exists \delta > 0 \text{ such that } \forall (x,y) \in D, 
+    \]
+    \[
+    0 < \sqrt{(x-a)^2 +(y-b)^2} < \delta \Rightarrow |f(x, y) - L| < \varepsilon.
+    \]
+\end{tcolorbox}
+
+
+% TEST FOR NONEXISTENCE OF A LIMIT
+
+
+\subsection{Test for Nonexistence of a Limit}
+
+\begin{tcolorbox}
+    \begin{multicols}{2}
+        \begin{itemize}
+            \item \large $\lim_{(x,y) \to (a,b) \text{ along } C_1} f(x,y) = L_1$
+            \item \large $\lim_{(x,y) \to (a,b) \text{ along } C_2} f(x,y) = L_2$
+        \end{itemize}
+    \end{multicols}
+    \[
+    L_1 \neq L_2 \implies \lim_{(x,y) \to (a,b)} f(x, y) \text{ does not exist.}
+    \]
+\end{tcolorbox}
+
+
+% PARTIAL DERIVATIVES
+
+
+\subsection{Partial Derivatives}
+
+\begin{tcolorbox}
+    The \textbf{partial derivative} of a function $f(x,y)$ with respect to $x$ is defined by:
+    \[
+    f_x(x,y) = \frac{\partial f}{\partial x} = \lim_{h \to 0} \frac{f(x+h,y)-f(x,y)}{h}.
+    \]
+\end{tcolorbox}
+
+
+% CLAIRAUT'S THEOREM
+
+
+\subsection{Clairaut’s Theorem}
+
+\begin{tcolorbox}
+    If the mixed partial derivatives exist and are continuous then:
+    \[
+    \frac{\partial ^2 f}{\partial x \partial y} = \frac{\partial ^2 f}{\partial y \partial x},
+    \]
+    or equivalently,
+    \[
+    f_{xy} = f_{yx}.
     \]
 \end{tcolorbox}
 
