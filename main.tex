@@ -1837,4 +1837,43 @@
 \end{tcolorbox}
 
 
+% PARAMETRIC DERIVATIVE
+
+
+\subsection{Parametric Derivative}
+
+\begin{tcolorbox}
+    If $x=f(t)$ and $y=g(t)$, the derivative of $y$ with respect to $x$ is:
+    \[
+    \frac{dy}{dx} = \frac{dy/dt}{dx/dt} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}}.
+    \]
+\end{tcolorbox}
+
+
+% AREA UNDER A PARAMETRIC CURVE
+
+
+\subsection{Area Under a Parametric Curve}
+
+\begin{tcolorbox}
+    Let a parametric curve be defined by $x=f(t)$ and $y=g(t)$ from $t=a$ to $t=b$. Then, the area is given by:
+    \[
+    A = \int_{x=f(a)}^{x=f(b)} y \, dx = \int_{t=a}^{t=b} g(t) \cdot f'(t) \, dt.
+    \]
+\end{tcolorbox}
+
+
+% ARC LENGTH OF A PARAMETRIC CURVE
+
+
+\subsection{Arc Length of a Parametric Curve}
+
+\begin{tcolorbox}
+    The \textbf{arc length} of a parametric curve defined by $x=f(t)$ and $y=g(t)$ from $t=a$ to $t=b$ is given by:
+    \[
+    L = \int_{a}^{b} \sqrt{\left( \frac{dx}{dt} \right)^2 + \left( \frac{dy}{dt} \right)^2} \, dt.
+    \]
+\end{tcolorbox}
+
+
 \end{document}
