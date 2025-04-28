@@ -1719,7 +1719,7 @@
 % TOTAL DIFFERENTIAL
 
 
-\subsection{Total DIfferential}
+\subsection{Total Differential}
 
 \begin{tcolorbox}
     \[
@@ -1791,6 +1791,48 @@
     \[
     D_u f(x_0,y_0) = \nabla f(x_0,y_0) \cdot \vec{u}.
     \]
+\end{tcolorbox}
+
+
+% TANGENT PLANE TO A LEVEL SURFACE
+
+
+\subsection{Tangent Plane to a Level Surface}
+
+\begin{tcolorbox}
+    The \textbf{tangent plane} to the level surfact at point $(x_0,y_0,z_0)$ of $F(x,y,z)=c$ is:
+    \[
+    \nabla F(x_0,y_0,z_0) \cdot (x-x_0,y-y_0,z-z_0)=0,
+    \]
+    or written out fully,
+    \[
+    F_x(x_0,y_0,z_0)(x-x_0) + F_y(x_0,y_0,z_0)(y-y_0) + F_z(x_0,y_0,z_0)(z-z_0) = 0.
+    \]
+\end{tcolorbox}
+
+
+% MAXIMUM AND MINIMUM VALUES OF A FUNCTION OF TWO VARIABLES
+
+
+\subsection{Maximum and Minimum Values of a Function of Two Variables}
+
+\begin{tcolorbox}
+    \begin{enumerate}
+        \item \textbf{Critical Points:} Solve the system of equations
+        \[
+        \frac{\partial f}{\partial x} (x,y) = 0, \quad \frac{\partial f}{\partial y} (x,y) = 0. 
+        \]
+        \item \textbf{Second Derivative Test:} Compute the second-order partial derivatives $f_{xx}$, $f_{yy}$, $f_{xy}$ and evaluate the discriminant
+        \[
+        D(x,y) = f_{xx}(x,y)f_{yy}(x,y) - [f_{xy}(x,y)]^2.
+        \]
+        \begin{itemize}
+            \item If $D>0$ and $f_{xx}(x_0,y_0)>0$: Local minimum.
+            \item If $D>0$ and $f_{xx}(x_0,y_0)<0$: Local maximum.
+            \item If $D<0$: Saddle point (neither max nor min).
+            \item If $D=0$: Inconclusive.
+        \end{itemize}
+    \end{enumerate}
 \end{tcolorbox}
 
 
