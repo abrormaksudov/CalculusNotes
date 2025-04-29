@@ -1947,4 +1947,64 @@
 \end{tcolorbox}
 
 
+% DOUBLE INTEGRAL
+
+
+\subsection{Double Integral}
+
+\begin{tcolorbox}
+    If $R$ is a bounded region and $f$ is integrable over $R$, then:
+    \[
+    \iint_R f(x,y) \, dA = \lim_{m,n \to \infty} \sum_{i=1}^m \sum_{j=1}^n f(x_{ij}^*,y_{ij}^*) \Delta A_{ij}.
+    \]
+\end{tcolorbox}
+
+
+% ITERATED INTEGRAL
+
+
+\subsection{Iterated Integral}
+
+\begin{tcolorbox}
+    For a function $f(x,y)$ defined over a rectangular region $R=[a,b]\times[c,d]$, the double integral
+    \[
+    \int_c^d\int_a^b f(x,y) \, dx \, dy.
+    \]
+\end{tcolorbox}
+
+
+% AVERAGE VALUE OF A FUNCTION OVER A REGION
+
+
+\subsection{Average Value of a Function over a Region}
+
+\begin{tcolorbox}
+    The average value of $f$ the region $R$ is defined by:
+    \[
+    f_{avg} = \frac{1}{A(R)} \iint_R f(x,y) \, dA.
+    \]
+\end{tcolorbox}
+
+
+% DOUBLE INTEGRAL OVER A GENERAL REGION
+
+
+\subsection{Double Integral Over a General Region}
+
+\begin{tcolorbox}
+    \begin{itemize}
+        \item \textbf{Type I Region} (vertical slices):\\
+        If $R=\{(x,y) : a \leq x \leq b, g_1(x) \leq y \leq g_2(x)\}$, then:
+        \[
+        \iint_R f(x,y) \, dA = \int_a^b \int_{g_1(x)}^{g_2(x)} f(x,y) \, dy \, dx.
+        \]
+        \item \textbf{Type II Region} (horizontal slices):\\
+        If $R=\{(x,y) : c \leq y \leq d, h_1(x) \leq x \leq h_2(x)\}$, then:
+        \[
+        \iint_R f(x,y) \, dA = \int_c^d \int_{h_1(y)}^{h_2(y)} f(x,y) \, dx \, dy.
+        \]
+    \end{itemize}
+\end{tcolorbox}
+
+
 \end{document}
