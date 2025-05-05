@@ -27,7 +27,7 @@
 \section{Limits}
 
 
-% % PRECISE DEFINITION OF A LIMIT
+% PRECISE DEFINITION OF A LIMIT
 
 
 \subsection{Precise Definition of a Limit}
@@ -136,8 +136,12 @@
 \subsection{Relationship between the Limit and One-Sided Limits}
 
 \begin{tcolorbox}
-    \[\lim_{x \to a} f(x) = L \quad \Leftrightarrow \quad \lim_{x \to a^+} f(x) = \lim_{x \to a^-} f(x) = L.\]
-    \[\lim_{x \to a^+} f(x) \neq \lim_{x \to a^-} f(x) \quad \Rightarrow \quad \lim_{x \to a} f(x) \text{ does not exist}.\]
+    \[
+    \lim_{x \to a} f(x) = L \iff \lim_{x \to a^+} f(x) = \lim_{x \to a^-} f(x) = L.
+    \]
+    \[
+    \lim_{x \to a^+} f(x) \neq \lim_{x \to a^-} f(x) \implies \lim_{x \to a} f(x) \text{ does not exist}.
+    \]
 \end{tcolorbox}
 
 
@@ -147,7 +151,10 @@
 \subsection{Comparison Theorem}
 
 \begin{tcolorbox}
-    If \( f(x) \leq g(x) \) when \( x \) is near \( a \), and \(\lim\limits_{x \to a} f(x)\) and \(\lim\limits_{x \to a} g(x)\) exist, then \[\lim\limits_{x \to a} f(x) \leq \lim\limits_{x \to a} g(x).\]
+    If  $f(x) \leq g(x)$ when $x$ is near $a$, and $\lim_{x \to a} f(x)$ and $\lim_{x \to a} g(x)$ exist, then 
+    \[
+    \lim_{x \to a} f(x) \leq \lim_{x \to a} g(x).
+    \]
 \end{tcolorbox}
 
 
@@ -157,9 +164,10 @@
 \subsection{Squeeze Theorem}
 
 \begin{tcolorbox}
-    If \( f(x) \leq g(x) \leq h(x) \) when \( x \) is near \( a \), and
-    \[ \lim\limits_{x \to a} f(x) = \lim\limits_{x \to a} h(x) = L \] then
-    \[\lim\limits_{x \to a} g(x) = L.\]
+    If $f(x) \leq g(x) \leq h(x)$ when $x$ is near $a$, then
+    \[ 
+    \lim\limits_{x \to a} f(x) = \lim\limits_{x \to a} h(x) = L \implies \lim\limits_{x \to a} g(x) = L.
+    \]
 \end{tcolorbox}
 
 
