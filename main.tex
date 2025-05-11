@@ -260,44 +260,42 @@
 
 \begin{tcolorbox}[breakable]
     \textbf{Vertical Asymptote:} 
-    \( x = a \) is a vertical asymptote if  
+    $x = a$ is a vertical asymptote if  
     \[
-    \lim\limits_{x \to a^{\pm}} f(x) = \pm\infty.
+    \lim_{x \to a^{\pm}} f(x) = \pm \infty.
     \]
     
     \textbf{Horizontal Asymptote:}
-    \( y = L \) is a horizontal asymptote if  
+    $y = L$ is a horizontal asymptote if  
     \[
-    \lim\limits_{x \to \pm\infty} f(x) = L.
+    \lim_{x \to \pm \infty} f(x) = L.
     \]
-    For \( \displaystyle f(x) = \frac{P(x)}{Q(x)} \), compare degrees of \( P \) and \( Q \):  
+    For $f(x) = \frac{P(x)}{Q(x)}$, compare degrees of $P$ and $Q$:  
     \[
     \begin{aligned}
-        &\deg P < \deg Q \quad \Rightarrow \quad y = 0. \\  
-        &\deg P = \deg Q \quad \Rightarrow \quad y = \frac{\text{leading coef. of } P}{\text{leading coef. of } Q}. \\  
-        &\deg P > \deg Q \quad \Rightarrow \quad \text{no horizontal asymptote}.
+        &\deg P < \deg Q \quad \implies \quad y = 0. \\  
+        &\deg P = \deg Q \quad \implies \quad y = \frac{\text{leading coef. of } P}{\text{leading coef. of } Q}. \\  
+        &\deg P > \deg Q \quad \implies \quad \text{no horizontal asymptote}.
     \end{aligned}
     \]
 
     \textbf{Oblique Asymptote:}
-    \( y = mx + b \) is an oblique asymptote if  
+    $y = mx + b$ is an oblique asymptote if  
     \[
-    \lim\limits_{x \to \pm\infty} \big( f(x) - (mx + b) \big) = 0.
+    \lim_{x \to \pm \infty} [f(x) - (mx + b)] = 0.
     \]
-    For a rational function \( \displaystyle f(x) = \frac{P(x)}{Q(x)} \), if \( \deg P = \deg Q + 1 \), then \( f(x) \) has an oblique asymptote.  
+    For a rational function $f(x) = \frac{P(x)}{Q(x)}$, if $\deg P = \deg Q + 1$, then $f(x)$ has an oblique asymptote.  
     Find it by polynomial long division:  
     \[
-    f(x) = D(x) + \frac{R(x)}{Q(x)}, \quad \text{as } x \to \pm\infty, \quad f(x) \approx D(x).
+    f(x) = D(x) + \frac{R(x)}{Q(x)}, \quad \text{as } x \to \pm \infty, \quad f(x) \approx D(x).
     \]
-    
-    \newpage
     
     \textbf{Curvilinear Asymptote:}
-    \( y = g(x) \) is a curvilinear asymptote if
+    $y = g(x)$ is a curvilinear asymptote if
     \[
-    \lim\limits_{x \to \pm\infty} \big( f(x) - g(x) \big) = 0,
+    \lim_{x \to \pm \infty} [f(x) - g(x)] = 0,
     \]
-    where \( g(x) \) is any non-linear function.
+    where $g(x)$ is any non-linear function.
 \end{tcolorbox}
 
 
